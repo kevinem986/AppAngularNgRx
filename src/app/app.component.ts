@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { appState } from './app.reducer';
+import * as fromMessage from './mensaje.action';
 
 @Component({
   selector: 'app-root',
@@ -16,11 +17,11 @@ export class AppComponent {
     this.dato$ = store.select('texto');
   }
 
-  spanishMsj(){
-    this.store.dispatch({type: "SPANISH"});
+  spanishMsg(){
+    this.store.dispatch(new fromMessage.SpanishMsg("Color Amarillo"));
   }
 
-  englishMsj(){
-    this.store.dispatch({type: "ENGLISH"});
+  englishMsg(){
+    this.store.dispatch(new fromMessage.EnglishMsg("Colour Yellow"));
   }
 }

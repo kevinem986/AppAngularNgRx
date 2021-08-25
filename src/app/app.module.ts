@@ -16,7 +16,7 @@ import { StoreDevtoolsModule } from "@ngrx/store-devtools";
       texto: miReducer
     }),
     StoreDevtoolsModule.instrument({
-      maxAge: 4
+      maxAge: 10
     })
   ],
   providers: [],
