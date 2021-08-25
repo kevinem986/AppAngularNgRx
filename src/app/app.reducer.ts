@@ -10,4 +10,19 @@ export const initialState = {
 
 export function miReducer(state: appState = initialState, action: Action) {
     console.log(action);
+
+    switch(action.type){
+        case 'SPANISH':
+            return {
+                ...state,
+                texto: 'Hola Mundo'
+            }
+        case 'ENGLISH':
+            return {
+                ...state,
+                texto: 'Hello World'
+            }
+        default:
+            return state;
+    }
 }

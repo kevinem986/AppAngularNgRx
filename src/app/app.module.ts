@@ -12,7 +12,7 @@ import { miReducer } from "./app.reducer";
   imports: [
     BrowserModule,
     StoreModule.forRoot({
-      mensaje: miReducer
+      texto: miReducer
     })
   ],
   providers: [],
